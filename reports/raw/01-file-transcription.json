@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "repo": "exp-stt-whisper-webgpu",
+    "commit": "5e875c5",
+    "timestamp": "2026-04-22T06:13:41.781Z",
+    "owner": "ai-webgpu-lab",
+    "track": "audio",
+    "scenario": "file-transcription-readiness",
+    "notes": "deterministic segment fixture; segments=2; transcriptLength=15; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-04-22T06:13:41.891Z",
+      "captured_by": "zzragida"
+    }
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 16,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "not-applicable",
+      "required_features": [],
+      "limits": {}
+    },
+    "backend": "mixed",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "cold"
+  },
+  "workload": {
+    "kind": "stt",
+    "name": "file-transcription-readiness",
+    "input_profile": "7.4s-2-segments",
+    "dataset": "transcript-fixture-v1"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 176.2,
+      "init_ms": 91.3,
+      "success_rate": 1,
+      "peak_memory_note": "16 GB reported by browser",
+      "error_type": ""
+    },
+    "stt": {
+      "audio_sec_per_sec": 81.05,
+      "first_partial_ms": 42.3,
+      "final_latency_ms": 91.3,
+      "wer": 0,
+      "cer": 0
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-file-transcription.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-stt-whisper-webgpu/",
+    "screenshots": [
+      "./reports/screenshots/01-file-transcription.png"
+    ]
+  }
+}
