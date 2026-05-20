@@ -2,8 +2,8 @@
 
 ## 1. 실험 요약
 - 저장소: exp-stt-whisper-webgpu
-- 커밋 해시: 5e875c5
-- 실험 일시: 2026-04-22T06:13:41.781Z -> 2026-04-22T06:13:41.781Z
+- 커밋 해시: 999a1cd
+- 실험 일시: 2026-05-20T15:45:58.507Z -> 2026-05-20T15:45:58.507Z
 - 담당자: ai-webgpu-lab
 - 실험 유형: `audio`
 - 상태: `success`
@@ -26,7 +26,7 @@
 - 장치명: Linux x86_64
 - device class: `desktop-high`
 - CPU: 16 threads
-- 메모리: 16 GB
+- 메모리: 32 GB
 - 전원 상태: `unknown`
 
 ### GPU / 실행 모드
@@ -43,7 +43,7 @@
 - 입력 프로필: 7.4s-2-segments
 - 데이터 크기: deterministic segment fixture; segments=2; transcriptLength=15; automation=playwright-chromium
 - dataset: transcript-fixture-v1
-- model_id 또는 renderer: -
+- model_id 또는 renderer: transcript-fixture-v1
 - 양자화/정밀도: -
 - resolution: -
 - context_tokens: -
@@ -51,26 +51,26 @@
 
 ## 5. 측정 지표
 ### 공통
-- time_to_interactive_ms: 176.2 ms
-- init_ms: 91.3 ms
+- time_to_interactive_ms: 206.9 ms
+- init_ms: 90.5 ms
 - success_rate: 1
-- peak_memory_note: 16 GB reported by browser
+- peak_memory_note: 32 GB reported by browser
 - error_type: -
 
-### STT
-- audio_sec_per_sec: 81.05
-- first_partial_ms: 42.3 ms
-- final_latency_ms: 91.3 ms
+### STT / Voice
+- audio_sec_per_sec: 81.77
+- first_partial_ms: 42.2 ms
+- final_latency_ms: 90.5 ms
 - wer: 0
 - cer: 0
 
 ## 6. 결과 표
 | Run | Scenario | Backend | Cache | Mean | P95 | Notes |
 |---|---|---:|---:|---:|---:|---|
-| 1 | File Transcription | mixed | cold | 81.05 | 91.3 | first_partial=42.3 ms, WER=0 |
+| 1 | File Transcription | mixed | cold | 81.77 | 90.5 | first_partial=42.2 ms, WER=0 |
 
 ## 7. 관찰
-- partial emission은 42.3 ms에 시작됐고 최종 latency는 91.3 ms였다.
+- partial emission은 42.2 ms에 시작됐고 최종 latency는 90.5 ms였다.
 - deterministic transcript fixture 기준 WER=0, CER=0가 기록됐다.
 - playwright-chromium로 수집된 automation baseline이며 headless=true, browser=Chromium 147.0.7727.15.
 - 실제 runtime/model/renderer 교체 전 deterministic harness 결과이므로, 절대 성능보다 보고 경로와 재현성 확인에 우선 의미가 있다.

@@ -1,6 +1,7 @@
 repo=exp-stt-whisper-webgpu
 scenario=File Transcription
-captured_at=2026-04-22T06:13:41.891Z
+url_search=(default)
+captured_at=2026-05-20T15:45:58.632Z
 browser=Chromium 147.0.7727.15
 headless=true
 meta_scenario=file-transcription-readiness
@@ -16,8 +17,8 @@ status=success
 {
   "meta": {
     "repo": "exp-stt-whisper-webgpu",
-    "commit": "5e875c5",
-    "timestamp": "2026-04-22T06:13:41.781Z",
+    "commit": "999a1cd",
+    "timestamp": "2026-05-20T15:45:58.507Z",
     "owner": "ai-webgpu-lab",
     "track": "audio",
     "scenario": "file-transcription-readiness",
@@ -27,9 +28,10 @@ status=success
       "browser_name": "Chromium",
       "browser_version": "147.0.7727.15",
       "headless": true,
-      "captured_at": "2026-04-22T06:13:41.891Z",
-      "captured_by": "zzragida"
-    }
+      "captured_at": "2026-05-20T15:45:58.632Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "01-file-transcription"
   },
   "environment": {
     "browser": {
@@ -44,7 +46,7 @@ status=success
       "name": "Linux x86_64",
       "class": "desktop-high",
       "cpu": "16 threads",
-      "memory_gb": 16,
+      "memory_gb": 32,
       "power_mode": "unknown"
     },
     "gpu": {
@@ -61,20 +63,21 @@ status=success
     "kind": "stt",
     "name": "file-transcription-readiness",
     "input_profile": "7.4s-2-segments",
-    "dataset": "transcript-fixture-v1"
+    "dataset": "transcript-fixture-v1",
+    "model_id": "transcript-fixture-v1"
   },
   "metrics": {
     "common": {
-      "time_to_interactive_ms": 176.2,
-      "init_ms": 91.3,
+      "time_to_interactive_ms": 206.9,
+      "init_ms": 90.5,
       "success_rate": 1,
-      "peak_memory_note": "16 GB reported by browser",
+      "peak_memory_note": "32 GB reported by browser",
       "error_type": ""
     },
     "stt": {
-      "audio_sec_per_sec": 81.05,
-      "first_partial_ms": 42.3,
-      "final_latency_ms": 91.3,
+      "audio_sec_per_sec": 81.77,
+      "first_partial_ms": 42.2,
+      "final_latency_ms": 90.5,
       "wer": 0,
       "cer": 0
     }
